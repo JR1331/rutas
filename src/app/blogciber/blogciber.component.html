@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="header">
+      <h1>Su blog de Ciberseguridad</h1>
+    </div>
+    <img src="../../assets/img/cursociber.jpg" alt="Imagen de Ciberseguridad" class="banner">
+    <div class="grid-container">
+        @for (item of cursos; track item.id) {
+            <div class="grid-item">
+                <img src={{item.ruta}} alt="Imagen" class="grid-image">
+                <h2>{{item.nombre}}</h2>
+                <p>
+                    {{item.descripcion}}
+                </p>
+                <button class="btn" [routerLink]="['/articulociber',item.id]">Más información</button>
+            </div>
+        }
+    </div>
+  </div>
+  

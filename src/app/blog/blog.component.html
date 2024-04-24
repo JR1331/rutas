@@ -1,0 +1,20 @@
+<h1>INMUEBLES DISPONIBLES</h1>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Nombre del inmueble</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+@for (item of inmuebles; track item.id) {
+    <tr>
+        <th>{{item.id}}</th>
+        <th><a [routerLink]="['/articulo',item.id]"  >{{item.nombre}}</a></th>
+        <th>{{item.descripcion}}</th>
+        <th><img src={{item.ruta}} width="100px" lang="200px"></th>
+    </tr>
+  
+}
+</table>

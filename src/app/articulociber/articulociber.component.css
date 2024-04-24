@@ -1,0 +1,12 @@
+.detalle-container {
+    background-color: black;
+    color: #00ff00; /* Verde */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .detalle-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  

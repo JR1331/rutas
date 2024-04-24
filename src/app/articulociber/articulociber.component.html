@@ -1,0 +1,12 @@
+@for (elemento of cursos; track elemento.id) {
+    @if (id==elemento.id) {
+        <div class="detalle-container">
+            <img src={{elemento.ruta}} alt="Imagen de Ciberseguridad" class="detalle-image">
+            <h2>{{elemento.nombre}}</h2>
+            <p>{{elemento.descripcion}}</p>
+            
+          </div>
+          
+    }
+}
+  

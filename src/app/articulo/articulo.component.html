@@ -1,0 +1,12 @@
+<h2>Este es el elemento {{id}}</h2>
+@for (inmueble of realEstates; track inmueble.id) {
+    @if (id==inmueble.id) {
+        <div>
+            <p>Nombre del inmueble: {{inmueble.nombre}}</p>
+            <p>Descripcion: {{inmueble.descripcion}}</p>
+            <p>Precio del inmueble: {{inmueble.precio}}</p>
+            <p>Nº de habitaciones{{inmueble.habitaciones}}</p>
+            <p>ID: {{inmueble.id}}</p>
+        </div>
+    }
+}

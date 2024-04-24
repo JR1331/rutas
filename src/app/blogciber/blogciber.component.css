@@ -1,0 +1,42 @@
+.container {
+    background-color: black;
+    color: rgb(27, 189, 27);
+    text-align: center;
+  }
+  
+  .header {
+    padding: 20px 0;
+  }
+  
+  .banner {
+    width: 100%;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .grid-item {
+    border: 2px solid rgb(48, 197, 48);
+    padding: 20px;
+  }
+  
+  .grid-image {
+    width: 100%;
+  }
+  
+  .btn {
+    background-color: rgb(49, 186, 49);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: rgb(14, 75, 14);
+  }
+  
