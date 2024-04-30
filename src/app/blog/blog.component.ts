@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { Inmueble } from '../_modelo/inmueble';
+import { InmuebleService } from '../_sercicio/inmueble.service';
 
 @Component({
   selector: 'app-blog',
@@ -8,11 +10,15 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
-export class BlogComponent {
-  inmuebles=[
-    {id:'1',nombre:'Vivienda vertical',descripcion:'---', ruta:'../../assets/img/vivienda1.jpg'},
-    {id:'2',nombre:'Inmueble para oficinas',descripcion:'---', ruta:'../../assets/img/vivienda2.png'},
-    {id:'3',nombre:'Vivienda horizontal',descripcion:'---', ruta:'../../assets/img/vivienda3.jpeg'},
-  ]
+export class BlogComponent implements OnInit{
+  
+  inmuebles:Inmueble[]=[];
+
+  constructor(private inmuebleServicio: InmuebleService){}
+  
+  ngOnInit(): void {
+    this.inmuebles = this.inmuebleServicio.obtenerTodos();
+  }
+  
 
 }

@@ -11,7 +11,7 @@
 @for (item of inmuebles; track item.id) {
     <tr>
         <th>{{item.id}}</th>
-        <th><a [routerLink]="['/articulo',item.id]"  >{{item.nombre}}</a></th>
+        <th><a [routerLink]="['/articulo',item.id]" class="enlace" >{{item.nombre}}</a></th>
         <th>{{item.descripcion}}</th>
         <th><img src={{item.ruta}} width="100px" lang="200px"></th>
     </tr>

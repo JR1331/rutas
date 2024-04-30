@@ -1,4 +1,7 @@
 import { Component,Input,OnInit } from '@angular/core';
+import { Inmueble } from '../_modelo/inmueble';
+import { InmuebleService } from '../_sercicio/inmueble.service';
+
 
 @Component({
   selector: 'app-articulo',
@@ -8,35 +11,17 @@ import { Component,Input,OnInit } from '@angular/core';
   styleUrl: './articulo.component.css'
 })
 export class ArticuloComponent implements OnInit{
-  ngOnInit(): void {
-    console.log(`id recibido ${this.id}`);
-  }
+  
   @Input()
   id:string='';
 
+  inmueble:Inmueble|undefined = new Inmueble;
 
-  realEstates = [
-    {
-      id:'1',
-      nombre: 'House',
-      descripcion: 'A beautiful house with a garden.',
-      precio: 500000,
-      habitaciones: 4
-    },
-    {
-      id:'2',
-      nombre: 'Apartment',
-      descripcion: 'A cozy apartment in the city center.',
-      precio: 300000,
-      habitaciones: 2
-    },
-    {
-      id:'3',
-      nombre: 'Townhouse',
-      descripcion: 'A stylish townhouse with modern design.',
-      precio: 400000,
-      habitaciones: 3
-    }
-  ];
+  constructor(private inmuebleServicio: InmuebleService){}  
+  
+  ngOnInit(): void {
+    this.inmueble = this.inmuebleServicio.obtenerUno(this.id);
+  }
+  
 
 }
